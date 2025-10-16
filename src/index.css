@@ -8,44 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Carbon Design System - Dark Theme */
-    --background: 0 0% 8.6%; /* Carbon Gray 100 #161616 */
-    --foreground: 0 0% 100%; /* Pure white */
+    /* Beige & Blue Professional Palette */
+    --background: 42 48% 96%; /* Soft beige background */
+    --foreground: 217 33% 17%; /* Deep blue-gray text */
 
-    --card: 0 0% 12.5%; /* Carbon Gray 90 #202020 */
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 217 33% 17%;
 
-    --popover: 0 0% 12.5%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 33% 17%;
 
-    /* IBM Blue accent for primary actions */
-    --primary: 217 89% 61%; /* IBM Blue 60 #4589FF */
+    /* Primary Blue */
+    --primary: 217 71% 53%; /* Professional blue #3B82F6 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15.7%; /* Carbon Gray 80 #282828 */
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary Beige */
+    --secondary: 42 48% 88%; /* Light beige #E8DCC8 */
+    --secondary-foreground: 217 33% 17%;
 
-    --muted: 0 0% 19.2%; /* Carbon Gray 70 #313131 */
-    --muted-foreground: 0 0% 78.4%; /* Carbon Gray 30 #C8C8C8 */
+    --muted: 42 30% 92%; /* Very light beige */
+    --muted-foreground: 217 20% 40%;
 
-    --accent: 217 89% 61%; /* IBM Blue */
+    --accent: 217 91% 60%; /* Bright blue accent */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 19.2%; /* Carbon Gray 70 */
-    --input: 0 0% 19.2%;
-    --ring: 217 89% 61%;
+    --border: 42 25% 85%; /* Soft beige border */
+    --input: 42 25% 85%;
+    --ring: 217 71% 53%;
 
-    --radius: 0rem; /* Carbon uses sharp corners */
+    --radius: 0.5rem;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8.6%) 0%, hsl(217 20% 12%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 8.6% / 0) 0%, hsl(0 0% 8.6%) 100%);
-
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 71% 53%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-beige: linear-gradient(180deg, hsl(42 48% 96%) 0%, hsl(42 48% 88%) 100%);
+    
     /* Transitions */
-    --transition-smooth: all 0.2s cubic-bezier(0.2, 0, 0.38, 0.9);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
