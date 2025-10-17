@@ -9,7 +9,7 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1320px", /* Carbon xlg breakpoint */
       },
     },
     extend: {
@@ -60,11 +60,37 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        /* Carbon Design System Colors */
+        'carbon-blue': {
+          50: "hsl(var(--carbon-blue-50))",
+          60: "hsl(var(--carbon-blue-60))",
+        },
+        'carbon-gray': {
+          10: "hsl(var(--carbon-gray-10))",
+          30: "hsl(var(--carbon-gray-30))",
+          70: "hsl(var(--carbon-gray-70))",
+          90: "hsl(var(--carbon-gray-90))",
+          100: "hsl(var(--carbon-gray-100))",
+        },
+        'carbon-green': {
+          50: "hsl(var(--carbon-green-50))",
+        },
+        'carbon-yellow': {
+          30: "hsl(var(--carbon-yellow-30))",
+        },
       },
       borderRadius: {
+        'none': '0px', /* Carbon uses sharp corners */
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      spacing: {
+        '18': '4.5rem', /* 72px - Carbon spacing */
+        '22': '5.5rem', /* 88px - Carbon spacing */
+        '88': '22rem', /* 352px - Carbon spacing */
+        '96': '24rem', /* 384px - Carbon spacing */
+        '128': '32rem', /* 512px - Carbon spacing */
       },
       keyframes: {
         "accordion-down": {
@@ -76,7 +102,7 @@ export default {
           to: { height: "0", opacity: "0" },
         },
         "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "0%": { opacity: "0", transform: "translateY(4px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "slide-in-right": {
@@ -91,6 +117,10 @@ export default {
           "0%": { width: "0%" },
           "100%": { width: "100%" },
         },
+        "carbon": {
+          "0%": { opacity: "0", transform: "translateY(4px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -99,6 +129,15 @@ export default {
         "slide-in-right": "slide-in-right 0.3s ease-out",
         "scale-in": "scale-in 0.3s ease-out",
         "progress-fill": "progress-fill 0.5s ease-out",
+        "carbon": "carbon 0.25s cubic-bezier(0.2, 0, 0.38, 0.9)",
+      },
+      transitionDuration: {
+        '150': '150ms',
+        '250': '250ms',
+        '350': '350ms',
+      },
+      transitionTimingFunction: {
+        'carbon': 'cubic-bezier(0.2, 0, 0.38, 0.9)',
       },
     },
   },

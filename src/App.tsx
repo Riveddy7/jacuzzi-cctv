@@ -6,8 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Overview from "./pages/Overview";
 import TechnicalSolution from "./pages/TechnicalSolution";
+import SolutionDetail from "./pages/SolutionDetail";
 import InteractiveMap from "./pages/InteractiveMap";
 import ExecutionPlan from "./pages/ExecutionPlan";
+import PostExecution from "./pages/PostExecution";
 import Investment from "./pages/Investment";
 import NotFound from "./pages/NotFound";
 
@@ -23,8 +25,10 @@ const App = () => (
           <Route path="/" element={<Landing />} />
           <Route path="/overview" element={<Overview />} />
           <Route path="/technical-solution" element={<TechnicalSolution />} />
+          <Route path="/technical-solution/:solutionId" element={<SolutionDetail />} />
           <Route path="/interactive-map" element={<InteractiveMap />} />
           <Route path="/execution-plan" element={<ExecutionPlan />} />
+          <Route path="/post-execution" element={<PostExecution />} />
           <Route path="/investment" element={<Investment />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,52 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Carbon Design System Colors - All colors in HSL format */
 
 @layer base {
   :root {
-    /* Beige & Blue Professional Palette */
-    --background: 42 48% 96%; /* Soft beige background */
-    --foreground: 217 33% 17%; /* Deep blue-gray text */
+    /* Carbon Color Palette */
+    --background: 0 0% 96%; /* Gray 10 #F4F4F4 */
+    --foreground: 220 20% 9%; /* Gray 100 #161616 */
 
-    --card: 0 0% 100%; /* Pure white cards */
-    --card-foreground: 217 33% 17%;
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 220 20% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 217 33% 17%;
+    --popover-foreground: 220 20% 9%;
 
-    /* Primary Blue */
-    --primary: 217 71% 53%; /* Professional blue #3B82F6 */
+    /* Primary Blue (Carbon Blue 60) */
+    --primary: 212 100% 53%; /* #0F62FF */
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary Beige */
-    --secondary: 42 48% 88%; /* Light beige #E8DCC8 */
-    --secondary-foreground: 217 33% 17%;
+    /* Secondary Gray (Carbon Gray 90) */
+    --secondary: 220 13% 22%; /* Gray 90 #393939 */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 42 30% 92%; /* Very light beige */
-    --muted-foreground: 217 20% 40%;
+    --muted: 0 0% 94%; /* Gray 10 */
+    --muted-foreground: 220 11% 32%; /* Gray 70 */
 
-    --accent: 217 91% 60%; /* Bright blue accent */
+    /* Accent Blue (Carbon Blue 50) */
+    --accent: 212 100% 64%; /* Blue 50 #4589FF */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 0 79% 63%; /* Red 60 #DA1E28 */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 42 25% 85%; /* Soft beige border */
-    --input: 42 25% 85%;
-    --ring: 217 71% 53%;
+    --border: 0 0% 88%; /* Gray 30 #E0E0E0 */
+    --input: 0 0% 88%;
+    --ring: 212 100% 53%;
 
-    --radius: 0.5rem;
+    --radius: 0rem; /* Carbon uses sharp corners */
 
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 71% 53%) 0%, hsl(217 91% 60%) 100%);
-    --gradient-beige: linear-gradient(180deg, hsl(42 48% 96%) 0%, hsl(42 48% 88%) 100%);
+    /* Additional Carbon Colors */
+    --carbon-blue-50: 212 100% 64%; /* #4589FF */
+    --carbon-blue-60: 212 100% 53%; /* #0F62FF */
+    --carbon-gray-10: 0 0% 96%; /* #F4F4F4 */
+    --carbon-gray-30: 0 0% 88%; /* #E0E0E0 */
+    --carbon-gray-70: 220 11% 32%; /* #525252 */
+    --carbon-gray-90: 220 13% 22%; /* #393939 */
+    --carbon-gray-100: 220 20% 9%; /* #161616 */
+    --carbon-green-50: 142 76% 36%; /* #24A148 */
+    --carbon-yellow-30: 45 100% 51%; /* #F1C21B */
     
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Carbon Transitions */
+    --transition-fast: 150ms cubic-bezier(0.2, 0, 0.38, 0.9);
+    --transition-normal: 250ms cubic-bezier(0.2, 0, 0.38, 0.9);
+    --transition-slow: 350ms cubic-bezier(0.2, 0, 0.38, 0.9);
   }
 }
 
@@ -56,6 +65,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
