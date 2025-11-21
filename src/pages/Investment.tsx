@@ -28,7 +28,7 @@ const Investment = () => {
     {
       id: "indoor-cameras",
       title: "Indoor Cameras",
-      amount: 237141.80,
+      amount: 276129.38,
       items: [
         "Steel Conduit (Interior)",
         "Cat. 6A Network Nodes",
@@ -40,7 +40,7 @@ const Investment = () => {
     {
       id: "outdoor-cameras",
       title: "Outdoor Cameras",
-      amount: 65835.90,
+      amount: 71969.70,
       items: [
         "Steel Conduit (Exterior)",
         "Cat. 6A Network Nodes",
@@ -52,12 +52,23 @@ const Investment = () => {
     {
       id: "special-cameras",
       title: "Special Cameras",
-      amount: 87680.76,
+      amount: 41805.70,
       items: [
         "Steel Conduit",
-        "14 Pelco Anti-Explosive Cameras",
+        "10 Anti-Explosive Cameras",
         "Cat. 6A Network Nodes",
         "Lifting Equipment"
+      ]
+    },
+    {
+      id: "licensing",
+      title: "Licensing",
+      amount: 18216.00,
+      items: [
+        "Software Licenses",
+        "Video Management System",
+        "Technical Support",
+        "System Updates"
       ]
     }
   ];

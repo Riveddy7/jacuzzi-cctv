@@ -29,9 +29,9 @@ const TechnicalSolution = () => {
     {
       id: "network-switches",
       title: "Network Switches",
-      brand: "AXIS",
+      brand: "NVT",
       description: "Enterprise-grade network switches with PoE+ capabilities for optimal camera performance.",
-      logo: "https://www.axis.com/themes/custom/axiscom/logo.png"
+      logo: "https://www.nvt.com/wp-content/uploads/2021/09/nvt-logo.png"
     },
     {
       id: "ups-systems",

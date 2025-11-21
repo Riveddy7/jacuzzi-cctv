@@ -90,14 +90,6 @@ const solutionData: Record<string, SolutionData> = {
         datasheet: "https://portal.openeye.net/assets/documents/oe-c2012b4-s-spec-sheet",
         image: "https://portal.openeye.net/media/1713/OE-C2012B8.png"
       },
-      {
-        model: "EXC2602-62-A0",
-        description: "ExSite 2 series Explosion Proof compact camera; 6MP 4.9-8mm",
-        specs: ["6MP Resolution", "Explosion Proof", "4.9-8mm", "24VAC/24VDC/POE+", "ATEX Certified"],
-        datasheet: "https://www.pelco.com/fs/documents/pelco-exsite-enhanced-2-series-compact-specification-sheet-en.pdf",
-        image: "https://pelco-566282893.imgix.net/product/ExSite_Enh2_Compact_1_v2.png?auto=format&fit=clip&q=80&w=600&s=7e8d88f288991e12a82177949a328a14",
-        brand: "PELCO"
-      }
     ]
   },
   "structured-cabling": {
@@ -283,9 +275,9 @@ const solutionData: Record<string, SolutionData> = {
   "network-switches": {
     id: "network-switches",
     title: "Network Switches",
-    brand: "AXIS",
+    brand: "NVT",
     description: "Enterprise-grade network switches with PoE+ capabilities for optimal camera performance.",
-    overview: "AXIS network switches are specifically designed for surveillance applications, providing reliable power and data transmission to IP cameras. Engineered for performance and ease of management in security environments.",
+    overview: "NVT network switches are specifically designed for surveillance applications, providing reliable power and data transmission to IP cameras. Engineered for performance and ease of management in security environments.",
     features: [
       "PoE+ support for high-power devices",
       "Intelligent port management for camera optimization",
@@ -294,31 +286,15 @@ const solutionData: Record<string, SolutionData> = {
       "Plug-and-play camera integration",
       "Advanced security features for network protection"
     ],
-    logo: "https://www.axis.com/themes/custom/axiscom/logo.png",
+    logo: "https://www.nvt.com/wp-content/uploads/2021/09/nvt-logo.png",
     products: [
       {
-        model: "D8248",
-        description: "48-port switch for effective network management, 740 W power budget, Optimized for surveillance solutions, Compliant with IEEE 802.3bt up to 90 W, 4 x SFP+ ports, Intuitive graphic topology for system overview",
-        specs: ["48 ports", "740W power budget", "IEEE 802.3bt up to 90W", "4 x SFP+ ports", "Graphic topology", "Surveillance optimized"],
-        datasheet: "https://www.axis.com/dam/public/2d/40/73/datasheet-axis-d8248-managed-poe++-switch-en-US-486654.pdf",
-        image: "https://www.axis.com/sites/axis/files/styles/square_500x500_/public/2024-08/D8248_angle_left_2405-Productimageswithcropping.png.webp?itok=YV1Wt6aD",
-        brand: "AXIS"
-      },
-      {
-        model: "D8308",
-        description: "AXIS D8308 Fiber Aggregation Switch, 8-port fiber switch for efficient network management",
-        specs: ["8-port fiber", "Aggregation switch", "Network management", "Fiber connectivity"],
-        datasheet: "https://www.axis.com/dam/public/da/1d/dc/datasheet-axis-d8308-fiber-aggregation-switch-en-US-486645.pdf",
-        image: "https://www.axis.com/sites/axis/files/styles/square_500x500_/public/2024-08/D8308_angle_left_2408-Productimageswithcropping.png.webp?itok=BxhQS6Cw",
-        brand: "AXIS"
-      },
-      {
-        model: "T8612 SFP",
-        description: "Small Form Factor Pluggable (SFP) transceiver module",
-        specs: ["SFP transceiver", "Small Form Factor", "LC connector", "Fiber optic module"],
-        datasheet: "https://www.axis.com/dam/public/2a/67/fb/datasheet-axis-t8612-sfp-module-lcsx-en-US-286742.pdf",
-        image: "https://www.axis.com/sites/axis/files/styles/square_500x500_/public/t8612-sfp-module-lc_0.png.webp?itok=sI7fJcFh",
-        brand: "AXIS"
+        model: "NV-FLX-024-10G",
+        description: "10 GIGABIT ETHERNET SWITCH for effective network management, Optimized for surveillance solutions, Compliant with IEEE 802.3bt up to 90 W, 4 x SFP+ ports, Intuitive graphic topology for system overview",
+        specs: ["24 ports", "10 Gigabit Ethernet", "IEEE 802.3bt up to 90W", "4 x SFP+ ports", "Graphic topology", "Surveillance optimized"],
+        datasheet: "https://www.nvt.com/wp-content/uploads/2021/09/NV-FLX-024-10G-datasheet.pdf",
+        image: "https://www.nvt.com/wp-content/uploads/2021/09/NV-FLX-024-10G.png",
+        brand: "NVT"
       }
     ]
   },
