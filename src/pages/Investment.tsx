@@ -16,7 +16,7 @@ const Investment = () => {
     {
       id: "infrastructure",
       title: "Infrastructure",
-      amount: 134297.21,
+      amount: 175974.91,
       items: [
         "Ladder Racks (66/200)",
         "IDF Cabinets",
@@ -32,7 +32,7 @@ const Investment = () => {
       items: [
         "Steel Conduit (Interior)",
         "Cat. 6A Network Nodes",
-        "101 Indoor Cameras",
+        "Indoor Cameras",
         "4 NVR Servers",
         "Lifting Equipment"
       ]
@@ -44,7 +44,7 @@ const Investment = () => {
       items: [
         "Steel Conduit (Exterior)",
         "Cat. 6A Network Nodes",
-        "41 Outdoor Cameras",
+        "Outdoor Cameras",
         "Wireless Link",
         "Lifting Equipment"
       ]
@@ -55,7 +55,7 @@ const Investment = () => {
       amount: 41805.70,
       items: [
         "Steel Conduit",
-        "10 Anti-Explosive Cameras",
+        "Anti-Explosive Cameras",
         "Cat. 6A Network Nodes",
         "Lifting Equipment"
       ]
@@ -63,7 +63,7 @@ const Investment = () => {
     {
       id: "licensing",
       title: "Licensing",
-      amount: 18216.00,
+      amount: 18215.99,
       items: [
         "Software Licenses",
         "Video Management System",
