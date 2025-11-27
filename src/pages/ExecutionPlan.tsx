@@ -36,9 +36,9 @@ const ExecutionPlan = () => {
       duration: "5 weeks",
       icon: Zap,
       activities: [
-        { task: "101 steel 3/4\" conduit drops for indoor cameras", duration: "3 weeks" },
-        { task: "41 steel 1\" conduit drops for outdoor cameras", duration: "1 week" },
-        { task: "14 steel conduit drops for explosion-proof cameras", duration: "1 week" }
+        { task: "129 steel 3/4\" conduit drops for indoor cameras", duration: "3 weeks" },
+        { task: "38 steel 1\" conduit drops for outdoor cameras", duration: "1 week" },
+        { task: "10 steel conduit drops for explosion-proof cameras", duration: "1 week" }
       ]
     },
     {
@@ -49,9 +49,9 @@ const ExecutionPlan = () => {
       duration: "5 weeks",
       icon: CheckCircle2,
       activities: [
-        { task: "Network cabling for 156 network nodes", duration: "3 weeks" },
-        { task: "Termination and labeling of 156 network nodes", duration: "2 weeks" },
-        { task: "Certification of 156 network nodes", duration: "2 days" }
+        { task: "Network cabling for 177 network nodes", duration: "3 weeks" },
+        { task: "Termination and labeling of 177 network nodes", duration: "2 weeks" },
+        { task: "Certification of 177 network nodes", duration: "2 days" }
       ]
     },
     {
@@ -62,7 +62,7 @@ const ExecutionPlan = () => {
       duration: "3 weeks",
       icon: Clock,
       activities: [
-        { task: "Mounting of 156 CCTV cameras", duration: "3 weeks" },
+        { task: "Mounting of 177 CCTV cameras", duration: "3 weeks" },
         { task: "Server configuration", duration: "2 days" },
         { task: "Camera focusing", duration: "2 days" }
       ]

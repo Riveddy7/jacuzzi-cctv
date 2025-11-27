@@ -13,7 +13,7 @@ Detailed project phases with specific activities, timelines, and deliverables fo
 **Activities**:
 - 250 ladder rack sections installation (5 weeks)
 - 1 floor rack for IDF installation (1 day)
-- 8 IDF cabinet installations at height (1 week)
+- 9 IDF cabinet installations at height (1 week)
 - Fiber optic installation and connection (1 week)
 
 **Deliverables**:
@@ -27,9 +27,9 @@ Detailed project phases with specific activities, timelines, and deliverables fo
 **Description**: Installation of steel conduit for camera cabling
 
 **Activities**:
-- 101 steel 3/4" conduit drops for indoor cameras (3 weeks)
-- 41 steel 1" conduit drops for outdoor cameras (1 week)
-- 14 steel conduit drops for explosion-proof cameras (1 week)
+- 129 steel 3/4" conduit drops for indoor cameras (3 weeks)
+- 38 steel 1" conduit drops for outdoor cameras (1 week)
+- 10 steel conduit drops for explosion-proof cameras (1 week)
 
 **Deliverables**:
 - Complete conduit infrastructure for all camera locations
@@ -42,9 +42,9 @@ Detailed project phases with specific activities, timelines, and deliverables fo
 **Description**: Network infrastructure for camera connectivity
 
 **Activities**:
-- Network cabling for 156 network nodes (3 weeks)
-- Termination and labeling of 156 network nodes (2 weeks)
-- Certification of 156 network nodes (2 days)
+- Network cabling for 177 network nodes (3 weeks)
+- Termination and labeling of 177 network nodes (2 weeks)
+- Certification of 177 network nodes (2 days)
 
 **Deliverables**:
 - Complete network cabling infrastructure
@@ -57,7 +57,7 @@ Detailed project phases with specific activities, timelines, and deliverables fo
 **Description**: Installation and setup of CCTV cameras
 
 **Activities**:
-- Mounting of 156 CCTV cameras (3 weeks)
+- Mounting of 177 CCTV cameras (3 weeks)
 - Server configuration (2 days)
 - Camera focusing (2 days)
 
@@ -141,7 +141,7 @@ Detailed project phases with specific activities, timelines, and deliverables fo
 
 ### Technical Requirements
 
-- All 156 cameras operational and integrated
+- All 177 cameras operational and integrated
 - Complete network infrastructure certified
 - System performance meets specifications
 - User training completed successfully
