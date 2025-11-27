@@ -11,7 +11,7 @@ Select project phases to customize your investment. The total will automatically
 
 **Included Components**:
 - Ladder Racks (66/200)
-- IDF Cabinets
+- 9 IDF Cabinets
 - Fiber Optic
 - Switches
 - Lifting Equipment
@@ -23,12 +23,12 @@ Select project phases to customize your investment. The total will automatically
 - Professional installation and certification
 
 ### Indoor Cameras Phase
-**Amount**: $276,129.38 USD + IVA
+**Amount**: $273,526.38 USD + IVA
 
 **Included Components**:
 - Steel Conduit (Interior)
-- Cat. 6A Network Nodes
-- Indoor Cameras
+- 129 Network Nodes
+- 129 Indoor Cameras
 - 4 NVR Servers
 - Lifting Equipment
 
@@ -39,12 +39,13 @@ Select project phases to customize your investment. The total will automatically
 - Centralized recording and management
 
 ### Outdoor Cameras Phase
-**Amount**: $71,969.70 USD + IVA
+**Amount**: $61,080.70 USD + IVA
 
 **Included Components**:
 - Steel Conduit (Exterior)
-- Cat. 6A Network Nodes
-- Outdoor Cameras
+- Network Nodes
+- 38 Outdoor Cameras
+- 1 NVR
 - Wireless Link
 - Lifting Equipment
 
@@ -55,12 +56,12 @@ Select project phases to customize your investment. The total will automatically
 - Deterrent effect on external threats
 
 ### Special Cameras Phase
-**Amount**: $41,805.70 USD + IVA
+**Amount**: $42,053.80 USD + IVA
 
 **Included Components**:
 - Steel Conduit
-- Anti-Explosive Cameras
-- Cat. 6A Network Nodes
+- 10 Anti-Explosive Cameras
+- Network Nodes
 - Lifting Equipment
 
 **Investment Benefits**:
@@ -70,10 +71,10 @@ Select project phases to customize your investment. The total will automatically
 - Enhanced protection for critical infrastructure
 
 ### Licensing Phase
-**Amount**: $18,215.99 USD + IVA
+**Amount**: $17,523.00 USD + IVA
 
 **Included Components**:
-- Software Licenses
+- Licensing for 177 Cameras
 - Video Management System
 - Technical Support
 - System Updates
@@ -114,33 +115,33 @@ Multiple financing options available to accommodate your budget requirements:
 ## Total Investment Calculation
 
 ### Standard Configuration (Recommended)
-**Infrastructure + Indoor + Outdoor Cameras**: $524,074.31 USD + IVA
-**Total with IVA (16%)**: $607,926.20 USD
+**Infrastructure + Indoor + Outdoor Cameras**: $510,582.31 USD + IVA
+**Total with IVA (16%)**: $592,275.48 USD
 
 ### Complete System Configuration
-**All Phases Included**: $584,095.99 USD + IVA
-**Total with IVA (16%)**: $677,551.35 USD
+**All Phases Included**: $570,159.79 USD + IVA
+**Total with IVA (16%)**: $661,385.36 USD
 
 ## Cost Analysis
 
 ### Investment Distribution
 
-**Infrastructure**: 30.1% of total investment
+**Infrastructure**: 30.9% of total investment
 - Critical foundation for system reliability
 - One-time installation with long-term benefits
 - Supports all current and future security needs
 
-**Indoor Cameras**: 47.3% of total investment
+**Indoor Cameras**: 48.0% of total investment
 - Largest component of surveillance system
 - Covers most critical operational areas
 - Provides highest return on security investment
 
-**Outdoor Cameras**: 12.3% of total investment
+**Outdoor Cameras**: 10.7% of total investment
 - Essential perimeter protection
 - Deters external security threats
 - Complements indoor surveillance coverage
 
-**Special Cameras**: 7.2% of total investment
+**Special Cameras**: 7.4% of total investment
 - Specialized protection for hazardous areas
 - Regulatory compliance requirement
 - Critical for comprehensive security strategy
