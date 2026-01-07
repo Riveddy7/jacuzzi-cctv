@@ -3,6 +3,9 @@ import Navigation from "@/components/Navigation";
 import { DollarSign, TrendingUp, Shield, CheckCircle, Plus, Minus } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
+
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884d8"];
 
 const Investment = () => {
   const [selectedPhases, setSelectedPhases] = useState<Record<string, boolean>>({
@@ -16,23 +19,24 @@ const Investment = () => {
     {
       id: "infrastructure",
       title: "Infrastructure",
-      amount: 175974.91,
+      amount: 112060.23,
       items: [
-        "Ladder Racks (66/200)",
-        "9 IDF Cabinets",
-        "Fiber Optic",
-        "Switches",
+        "180 Ladder Rack Sections (66/200)",
+        "5 IDF Cabinets",
+        "1 MDF Rack",
+        "1000m Fiber Optic",
+        "6 Cisco Switches",
         "Lifting Equipment"
       ]
     },
     {
       id: "indoor-cameras",
       title: "Indoor Cameras",
-      amount: 273526.38,
+      amount: 277668.67,
       items: [
-        "Steel Conduit (Interior)",
-        "129 Network Nodes",
-        "129 Indoor Cameras",
+        "Steel Conduit",
+        "130 Network Nodes",
+        "130 Indoor Cameras",
         "4 NVR Servers",
         "Lifting Equipment"
       ]
@@ -40,12 +44,12 @@ const Investment = () => {
     {
       id: "outdoor-cameras",
       title: "Outdoor Cameras",
-      amount: 61080.70,
+      amount: 58811.70,
       items: [
-        "Steel Conduit (Exterior)",
-        "Network Nodes",
+        "Steel Conduit",
+        "38 Network Nodes",
         "38 Outdoor Cameras",
-        "1 NVR",
+        "1 NVR Server",
         "Wireless Link",
         "Lifting Equipment"
       ]
@@ -64,9 +68,9 @@ const Investment = () => {
     {
       id: "licensing",
       title: "Licensing",
-      amount: 17523.00,
+      amount: 17622.00,
       items: [
-        "Licensing for 177 Cameras",
+        "Licensing for 178 Cameras",
         "Video Management System",
         "Technical Support",
         "System Updates"
@@ -103,13 +107,13 @@ const Investment = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-6xl mx-auto animate-carbon">
           <h1 className="text-5xl font-semibold text-foreground mb-4">
             Investment Summary
           </h1>
-          
+
           <p className="text-lg text-muted-foreground mb-16 max-w-3xl leading-relaxed">
             Select project phases to customize your investment. The total will automatically update based on your selections.
           </p>
@@ -148,13 +152,12 @@ const Investment = () => {
                 minimumFractionDigits: 2,
                 maximumFractionDigits: 2
               }).format(phase.amount);
-              
+
               return (
                 <Card
                   key={index}
-                  className={`p-6 bg-card border-border hover:shadow-lg transition-all duration-150 animate-carbon ${
-                    isSelected ? 'border-primary' : ''
-                  }`}
+                  className={`p-6 bg-card border-border hover:shadow-lg transition-all duration-150 animate-carbon ${isSelected ? 'border-primary' : ''
+                    }`}
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <div className="mb-4">
@@ -165,7 +168,7 @@ const Investment = () => {
                         <span className="text-sm font-medium text-accent">+ IVA</span>
                       </div>
                     </div>
-                    
+
                     {isSelected && (
                       <div className="flex items-center gap-2 mb-2">
                         <div className="flex-1 h-2 bg-secondary rounded-none overflow-hidden">
@@ -178,7 +181,7 @@ const Investment = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   <ul className="space-y-1 mb-4">
                     {phase.items.map((item, idx) => (
                       <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -187,7 +190,7 @@ const Investment = () => {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Button
                     variant={isSelected ? "default" : "outline"}
                     className="w-full"
@@ -229,38 +232,37 @@ const Investment = () => {
             </Card>
           </div>
 
-          {/* Summary Table */}
+          {/* Investment Breakdown Chart */}
           <Card className="p-8 bg-card border-border mt-8">
             <h3 className="text-2xl font-semibold text-foreground mb-6">Investment Breakdown</h3>
-            <div className="space-y-4">
-              {phases.filter(phase => selectedPhases[phase.id]).map((phase, index) => {
-                const formattedAmount = new Intl.NumberFormat('en-US', {
-                  style: 'currency',
-                  currency: 'USD',
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2
-                }).format(phase.amount);
-                const percentage = calculatePercentage(phase.amount);
-                const withIVA = new Intl.NumberFormat('en-US', {
-                  style: 'currency',
-                  currency: 'USD',
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2
-                }).format(phase.amount * 1.16);
-                
-                return (
-                  <div key={index} className="flex items-center justify-between pb-4 border-b border-border last:border-0">
-                    <div>
-                      <h4 className="font-medium text-foreground">{phase.title}</h4>
-                      <p className="text-sm text-muted-foreground">{phase.items.length} items included</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="font-semibold text-foreground">{formattedAmount}</p>
-                      <p className="text-sm text-muted-foreground">+ {percentage}% with IVA: {withIVA}</p>
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="h-[400px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={phases.filter(phase => selectedPhases[phase.id])}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    label={({ title, percent }) => `${title} ${(percent * 100).toFixed(0)}%`}
+                    outerRadius={150}
+                    fill="#8884d8"
+                    dataKey="amount"
+                    nameKey="title"
+                  >
+                    {phases.filter(phase => selectedPhases[phase.id]).map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[phases.indexOf(entry) % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip
+                    formatter={(value: number) => new Intl.NumberFormat('en-US', {
+                      style: 'currency',
+                      currency: 'USD',
+                      minimumFractionDigits: 2
+                    }).format(value)}
+                  />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
             </div>
           </Card>
         </div>

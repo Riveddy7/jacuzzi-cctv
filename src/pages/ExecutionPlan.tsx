@@ -19,13 +19,12 @@ const ExecutionPlan = () => {
       phase: "1",
       title: "IDF Infrastructure",
       subtitle: "Installation of ladder racks, IDFs and Fiber Optic",
-      duration: "5 weeks",
+      duration: "4.5 weeks",
       icon: Wrench,
       activities: [
-        { task: "250 ladder rack sections", duration: "5 weeks" },
-        { task: "1 floor rack for IDF", duration: "1 day" },
-        { task: "8 IDF cabinet installations at height", duration: "1 week" },
-        { task: "Fiber optic installation and connection", duration: "1 week" }
+        { task: "Installation of 180 ladder rack sections", duration: "3 weeks" },
+        { task: "Installation of 5 IDF Cabinets and 1 MDF Rack", duration: "1 week" },
+        { task: "Laying and connection of 1000 meters of Fiber Optic", duration: "0.5 weeks" }
       ]
     },
     {
@@ -33,12 +32,13 @@ const ExecutionPlan = () => {
       phase: "2",
       title: "Steel Conduit Channeling",
       subtitle: "Installation of steel conduit for camera cabling",
-      duration: "5 weeks",
+      duration: "10.5 weeks",
       icon: Zap,
       activities: [
-        { task: "129 steel 3/4\" conduit drops for indoor cameras", duration: "3 weeks" },
-        { task: "38 steel 1\" conduit drops for outdoor cameras", duration: "1 week" },
-        { task: "10 steel conduit drops for explosion-proof cameras", duration: "1 week" }
+        { task: "Installation of 600 sections of 3/4\" conduit", duration: "5 weeks" },
+        { task: "Installation of 140 sections of 1\" conduit", duration: "1.5 weeks" },
+        { task: "Installation of 103 sections of aluminum conduit for explosion-proof area", duration: "1 week" },
+        { task: "Installation of 33 sections of 1 1/4\" conduit and 57 sections of 3/4\" conduit for exterior", duration: "2 weeks" }
       ]
     },
     {
@@ -46,12 +46,10 @@ const ExecutionPlan = () => {
       phase: "3",
       title: "Camera Network Node",
       subtitle: "Network infrastructure for camera connectivity",
-      duration: "5 weeks",
+      duration: "3 weeks",
       icon: CheckCircle2,
       activities: [
-        { task: "Network cabling for 177 network nodes", duration: "3 weeks" },
-        { task: "Termination and labeling of 177 network nodes", duration: "2 weeks" },
-        { task: "Certification of 177 network nodes", duration: "2 days" }
+        { task: "Installation of 178 Camera Network Nodes, termination and labeling", duration: "3 weeks" }
       ]
     },
     {
@@ -62,9 +60,7 @@ const ExecutionPlan = () => {
       duration: "3 weeks",
       icon: Clock,
       activities: [
-        { task: "Mounting of 177 CCTV cameras", duration: "3 weeks" },
-        { task: "Server configuration", duration: "2 days" },
-        { task: "Camera focusing", duration: "2 days" }
+        { task: "Mounting and focusing of 178 cameras indoors and outdoors", duration: "3 weeks" }
       ]
     }
   ];
@@ -72,13 +68,13 @@ const ExecutionPlan = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-6xl mx-auto animate-carbon">
           <h1 className="text-5xl font-semibold text-foreground mb-4">
             Execution Plan & Timeline
           </h1>
-          
+
           <p className="text-lg text-muted-foreground mb-16 max-w-3xl leading-relaxed">
             Detailed project phases with specific activities, timelines, and deliverables for systematic implementation of the Jacuzzi CCTV security system.
           </p>
@@ -87,7 +83,7 @@ const ExecutionPlan = () => {
             {phases.map((phase, index) => {
               const Icon = phase.icon;
               const isExpanded = expandedPhases[phase.id] || false;
-              
+
               return (
                 <Card
                   key={index}
@@ -122,7 +118,7 @@ const ExecutionPlan = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Expandable Content */}
                   {isExpanded && (
                     <div className="px-6 pb-6 border-t border-border">
@@ -160,38 +156,63 @@ const ExecutionPlan = () => {
                 </div>
               </div>
               <div className="text-right">
-                <p className="text-2xl font-semibold text-primary">18 weeks</p>
-                <p className="text-sm text-muted-foreground">Approximately 4.5 months</p>
+                <p className="text-2xl font-semibold text-primary">21 weeks</p>
+                <p className="text-sm text-muted-foreground">Approximately 5 months</p>
               </div>
             </div>
           </Card>
 
-          {/* Project Timeline Overview */}
+          {/* Project Timeline Overview - Gantt Style */}
           <Card className="mt-8 p-6 bg-card border-border">
-            <h3 className="text-xl font-semibold text-foreground mb-4">Timeline Overview</h3>
-            <div className="space-y-3">
-              {phases.map((phase, index) => (
-                <div key={index} className="flex items-center gap-4">
-                  <div className="w-8 h-8 bg-primary flex items-center justify-center flex-shrink-0 text-primary-foreground text-sm font-medium">
-                    {phase.phase}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-medium text-foreground">{phase.title}</span>
-                      <span className="text-xs text-muted-foreground">{phase.duration}</span>
+            <h3 className="text-xl font-semibold text-foreground mb-6">Timeline Overview</h3>
+
+            <div className="relative">
+              {/* Gantt Chart Bar */}
+              <div className="flex w-full h-12 bg-carbon-gray-10 rounded-lg overflow-hidden mb-4">
+                {phases.map((phase, index) => {
+                  const widthPercentage = (parseFloat(phase.duration) / 21) * 100;
+                  const colors = ["bg-primary", "bg-blue-600", "bg-indigo-600", "bg-violet-600"];
+                  const color = colors[index % colors.length];
+
+                  return (
+                    <div
+                      key={index}
+                      className={`h-full ${color} flex items-center justify-center text-white text-xs font-medium transition-all duration-500 hover:opacity-90 cursor-help relative group`}
+                      style={{ width: `${widthPercentage}%` }}
+                    >
+                      <span className="hidden sm:inline-block">P{phase.phase}</span>
+                      {/* Tooltip */}
+                      <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 hidden group-hover:block w-48 p-2 bg-popover text-popover-foreground text-xs rounded shadow-lg z-10 border border-border text-center">
+                        <div className="font-bold mb-1">{phase.title}</div>
+                        <div>{phase.duration} ({Math.round(widthPercentage)}%)</div>
+                        <div className="w-2 h-2 bg-popover absolute top-full left-1/2 -translate-x-1/2 rotate-45 border-r border-b border-border -mt-1"></div>
+                      </div>
                     </div>
-                    <div className="h-2 bg-carbon-gray-10 rounded-none overflow-hidden">
-                      <div
-                        className="h-full bg-primary transition-all duration-500"
-                        style={{
-                          width: `${(parseInt(phase.duration) / 18) * 100}%`,
-                          animationDelay: `${index * 100}ms`
-                        }}
-                      />
+                  );
+                })}
+              </div>
+
+              {/* Legend/Labels */}
+              <div className="space-y-2">
+                {phases.map((phase, index) => {
+                  const colors = ["bg-primary", "bg-blue-600", "bg-indigo-600", "bg-violet-600"];
+                  const color = colors[index % colors.length];
+                  const widthPercentage = Math.round((parseFloat(phase.duration) / 21) * 100);
+
+                  return (
+                    <div key={index} className="flex items-center justify-between text-sm">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-3 h-3 rounded-full ${color}`}></div>
+                        <span className="font-medium text-foreground">Phase {phase.phase}: {phase.title}</span>
+                      </div>
+                      <div className="flex items-center gap-4 text-muted-foreground">
+                        <span>{phase.duration}</span>
+                        <span className="w-12 text-right">{widthPercentage}%</span>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ))}
+                  );
+                })}
+              </div>
             </div>
           </Card>
         </div>

@@ -4,6 +4,12 @@ import Navigation from "@/components/Navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+import openEyeLogo from "@/assets/logos/openeye-logo.jpg";
+import panduitLogo from "@/assets/logos/panduit-logo.svg";
+import charofilLogo from "@/assets/logos/charofil-logo.png";
+import ciscoLogo from "@/assets/logos/cisco-logo.png";
+import apcLogo from "@/assets/logos/apc-logo.png";
+
 interface ProductModel {
   model: string;
   description: string;
@@ -39,7 +45,7 @@ const solutionData: Record<string, SolutionData> = {
       "H.265 compression for efficient storage utilization",
       "Weather-resistant construction for outdoor deployment"
     ],
-    logo: "https://www.openeye.net/wp-content/uploads/2023/04/logo.png.webp",
+    logo: openEyeLogo,
     products: [
       {
         model: "OE-C9912M20",
@@ -106,7 +112,7 @@ const solutionData: Record<string, SolutionData> = {
       "Certified performance standards compliance",
       "Lifetime warranty on all cabling components"
     ],
-    logo: "https://www.panduit.com/content/dam/panduit/en/general/Panduit%20Logo%20Desktop%20header.svg",
+    logo: panduitLogo,
     products: [
       {
         model: "PUR6ASD04BU-CG",
@@ -204,7 +210,7 @@ const solutionData: Record<string, SolutionData> = {
       "Lockable security features for asset protection",
       "Modular design for future expansion"
     ],
-    logo: "https://charofil.mx/wp-content/uploads/2022/04/LOGO-CHAROFIL-24.png",
+    logo: charofilLogo,
     products: [
       {
         model: "XGL64222B",
@@ -275,9 +281,9 @@ const solutionData: Record<string, SolutionData> = {
   "network-switches": {
     id: "network-switches",
     title: "Network Switches",
-    brand: "NVT",
+    brand: "Cisco",
     description: "Enterprise-grade network switches with PoE+ capabilities for optimal camera performance.",
-    overview: "NVT network switches are specifically designed for surveillance applications, providing reliable power and data transmission to IP cameras. Engineered for performance and ease of management in security environments.",
+    overview: "Cisco network switches are specifically designed for surveillance applications, providing reliable power and data transmission to IP cameras. Engineered for performance and ease of management in security environments.",
     features: [
       "PoE+ support for high-power devices",
       "Intelligent port management for camera optimization",
@@ -286,15 +292,23 @@ const solutionData: Record<string, SolutionData> = {
       "Plug-and-play camera integration",
       "Advanced security features for network protection"
     ],
-    logo: "https://www.nvt.com/wp-content/uploads/2021/09/nvt-logo.png",
+    logo: ciscoLogo,
     products: [
       {
-        model: "NV-FLX-024-10G",
-        description: "10 GIGABIT ETHERNET SWITCH for effective network management, Optimized for surveillance solutions, Compliant with IEEE 802.3bt up to 90 W, 4 x SFP+ ports, Intuitive graphic topology for system overview",
-        specs: ["24 ports", "10 Gigabit Ethernet", "IEEE 802.3bt up to 90W", "4 x SFP+ ports", "Graphic topology", "Surveillance optimized"],
-        datasheet: "https://www.nvt.com/wp-content/uploads/2021/09/NV-FLX-024-10G-datasheet.pdf",
-        image: "https://www.nvt.com/wp-content/uploads/2021/09/NV-FLX-024-10G.png",
-        brand: "NVT"
+        model: "C1300-24FP-4G",
+        description: "Cisco Switch Catalyst 1300, 24 puertos Gigabit Ethernet, PoE+ con 375W totales, 4 puertos SFP Gigabit",
+        specs: ["24 Ports", "Gigabit Ethernet", "PoE+ 375W", "4 x 1G SFP", "Managed Layer 3"],
+        datasheet: "https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-1300-series-switches/nb-06-cat1300-ser-data-sheet-cte-en.html",
+        image: ciscoLogo,
+        brand: "Cisco"
+      },
+      {
+        model: "C1200-48P-4X",
+        description: "Cisco Switch Catalyst 1200, 48 puertos Gigabit Ethernet, PoE+ con 375W totales, 4 Puertos SFP+ (4x 1G/10G), Incluye cable CAB-16AWG-AC, el Smartnet se adquieren por separado.",
+        specs: ["48 Ports", "Gigabit Ethernet", "PoE+ 375W", "4 x 10G SFP+", "Smart Managed Layer 2"],
+        datasheet: "https://www.cisco.com/c/en/us/products/collateral/switches/catalyst-1200-series-switches/nb-06-cat1200-ser-data-sheet-cte-en.html",
+        image: ciscoLogo,
+        brand: "Cisco"
       }
     ]
   },
@@ -312,7 +326,7 @@ const solutionData: Record<string, SolutionData> = {
       "Automatic voltage regulation for power conditioning",
       "Hot-swappable batteries for continuous operation"
     ],
-    logo: "https://sps.mx/wp-content/uploads/2024/05/apc-logo-500-300.png",
+    logo: apcLogo,
     products: [
       {
         model: "APC-SMT1500C",
@@ -363,19 +377,19 @@ const SolutionDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 pt-24 pb-16">
         <div className="max-w-6xl mx-auto animate-carbon">
           {/* Header */}
           <div className="mb-8">
-            <Link 
-              to="/technical-solution" 
+            <Link
+              to="/technical-solution"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-4"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Technical Solutions
             </Link>
-            
+
             <div className="flex items-center gap-4 mb-4">
               <div className="w-20 h-20 bg-carbon-gray-10 border border-carbon-gray-30 rounded-none flex items-center justify-center p-3">
                 <img
@@ -389,7 +403,7 @@ const SolutionDetail = () => {
                 <p className="text-lg text-primary font-medium">{solution.brand}</p>
               </div>
             </div>
-            
+
             <p className="text-lg text-muted-foreground max-w-4xl leading-relaxed">
               {solution.description}
             </p>
@@ -419,7 +433,7 @@ const SolutionDetail = () => {
           {/* Product Models */}
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold text-foreground">Product Models</h2>
-            
+
             {solution.products.map((product, index) => (
               <Card key={index} className="p-6 bg-card border-border">
                 <div className="flex items-start justify-between gap-6">
@@ -442,7 +456,7 @@ const SolutionDetail = () => {
                       )}
                     </div>
                     <p className="text-muted-foreground mb-4 leading-relaxed">{product.description}</p>
-                    
+
                     <div className="mb-4">
                       <h4 className="text-sm font-medium text-foreground mb-2">Specifications:</h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -455,7 +469,7 @@ const SolutionDetail = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-col items-end gap-3">
                     <a
                       href={product.datasheet}

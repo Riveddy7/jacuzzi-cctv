@@ -7,7 +7,7 @@ Select project phases to customize your investment. The total will automatically
 ## Investment Breakdown
 
 ### Infrastructure Phase
-**Amount**: $175,974.91 USD + IVA
+**Amount**: $145,901.23 USD + IVA
 
 **Included Components**:
 - Ladder Racks (66/200)
@@ -23,7 +23,7 @@ Select project phases to customize your investment. The total will automatically
 - Professional installation and certification
 
 ### Indoor Cameras Phase
-**Amount**: $273,526.38 USD + IVA
+**Amount**: $274,474.97 USD + IVA
 
 **Included Components**:
 - Steel Conduit (Interior)
@@ -39,7 +39,7 @@ Select project phases to customize your investment. The total will automatically
 - Centralized recording and management
 
 ### Outdoor Cameras Phase
-**Amount**: $61,080.70 USD + IVA
+**Amount**: $58,811.70 USD + IVA
 
 **Included Components**:
 - Steel Conduit (Exterior)
@@ -115,38 +115,38 @@ Multiple financing options available to accommodate your budget requirements:
 ## Total Investment Calculation
 
 ### Standard Configuration (Recommended)
-**Infrastructure + Indoor + Outdoor Cameras**: $510,582.31 USD + IVA
-**Total with IVA (16%)**: $592,275.48 USD
+**Infrastructure + Indoor + Outdoor Cameras**: $480,287.63 USD + IVA
+**Total with IVA (16%)**: $557,133.65 USD
 
 ### Complete System Configuration
-**All Phases Included**: $570,159.79 USD + IVA
-**Total with IVA (16%)**: $661,385.36 USD
+**All Phases Included**: $538,763.80 USD + IVA
+**Total with IVA (16%)**: $624,966.01 USD
 
 ## Cost Analysis
 
 ### Investment Distribution
 
-**Infrastructure**: 30.9% of total investment
+**Infrastructure**: 27.1% of total investment
 - Critical foundation for system reliability
 - One-time installation with long-term benefits
 - Supports all current and future security needs
 
-**Indoor Cameras**: 48.0% of total investment
+**Indoor Cameras**: 50.9% of total investment
 - Largest component of surveillance system
 - Covers most critical operational areas
 - Provides highest return on security investment
 
-**Outdoor Cameras**: 10.7% of total investment
+**Outdoor Cameras**: 10.9% of total investment
 - Essential perimeter protection
 - Deters external security threats
 - Complements indoor surveillance coverage
 
-**Special Cameras**: 7.4% of total investment
+**Special Cameras**: 7.8% of total investment
 - Specialized protection for hazardous areas
 - Regulatory compliance requirement
 - Critical for comprehensive security strategy
 
-**Licensing**: 3.1% of total investment
+**Licensing**: 3.3% of total investment
 - Legal compliance for software usage
 - Access to premium features and updates
 - Technical support and maintenance
