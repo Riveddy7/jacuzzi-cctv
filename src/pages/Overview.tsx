@@ -23,7 +23,7 @@ const Overview = () => {
   ];
 
   const keyMetrics = [
-    { label: "HD Cameras", value: "178", icon: Camera, color: "text-primary" },
+    { label: "HD Cameras", value: "177", icon: Camera, color: "text-primary" },
     { label: "Facility Size", value: "50,000 sq ft", icon: Activity, color: "text-primary" },
     { label: "Coverage", value: "24/7", icon: Shield, color: "text-primary" },
     { label: "Security Gaps", value: "Critical", icon: AlertTriangle, color: "text-destructive" },
@@ -42,7 +42,7 @@ const Overview = () => {
             </h1>
             <p className="text-lg text-muted-foreground max-w-4xl leading-relaxed">
               State-of-the-art centralized CCTV system for Jacuzzi production facility.
-              Enhancing operational security with 178 HD cameras and comprehensive surveillance coverage.
+              Enhancing operational security with 177 HD cameras and comprehensive surveillance coverage.
             </p>
           </div>
 

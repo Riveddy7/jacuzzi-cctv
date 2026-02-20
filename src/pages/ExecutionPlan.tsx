@@ -49,7 +49,7 @@ const ExecutionPlan = () => {
       duration: "3 weeks",
       icon: CheckCircle2,
       activities: [
-        { task: "Installation of 178 Camera Network Nodes, termination and labeling", duration: "3 weeks" }
+        { task: "Installation of 177 Camera Network Nodes, termination and labeling", duration: "3 weeks" }
       ]
     },
     {
@@ -60,7 +60,7 @@ const ExecutionPlan = () => {
       duration: "3 weeks",
       icon: Clock,
       activities: [
-        { task: "Mounting and focusing of 178 cameras indoors and outdoors", duration: "3 weeks" }
+        { task: "Mounting and focusing of 177 cameras indoors and outdoors", duration: "3 weeks" }
       ]
     }
   ];

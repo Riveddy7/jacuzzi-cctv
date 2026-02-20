@@ -9,71 +9,77 @@ const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884d8"];
 
 const Investment = () => {
   const [selectedPhases, setSelectedPhases] = useState<Record<string, boolean>>({
-    infrastructure: true,
-    indoorCameras: true,
-    outdoorCameras: true,
-    specialCameras: false,
+    "infrastructure-quality": true,
+    "cameras-quality": true,
+    "infrastructure-surveillance": true,
+    "interior-cameras": true,
+    "exterior-cameras": true,
+    "special-cameras": true,
   });
 
   const phases = [
     {
-      id: "infrastructure",
-      title: "Infrastructure",
-      amount: 112060.23,
+      id: "infrastructure-quality",
+      title: "Infrastructure for Quality",
+      amount: 41512.81,
       items: [
-        "180 Ladder Rack Sections (66/200)",
-        "5 IDF Cabinets",
-        "1 MDF Rack",
-        "1000m Fiber Optic",
-        "6 Cisco Switches",
+        "Ladder Rack Sections",
+        "IDF/MDF Cabinets (Partial)",
+        "Fiber Optic Routing",
         "Lifting Equipment"
       ]
     },
     {
-      id: "indoor-cameras",
-      title: "Indoor Cameras",
-      amount: 277668.67,
+      id: "cameras-quality",
+      title: "Cameras for Quality",
+      amount: 41512.81,
       items: [
+        "Quality Assurance Cameras",
+        "Network Nodes for Quality"
+      ]
+    },
+    {
+      id: "infrastructure-surveillance",
+      title: "Infrastructure for Surveillance",
+      amount: 71483.42,
+      items: [
+        "Cisco Switches",
+        "Main Fiber Optic",
         "Steel Conduit",
-        "130 Network Nodes",
-        "130 Indoor Cameras",
-        "4 NVR Servers",
         "Lifting Equipment"
       ]
     },
     {
-      id: "outdoor-cameras",
-      title: "Outdoor Cameras",
-      amount: 58811.70,
+      id: "interior-cameras",
+      title: "Interior Cameras for Surveillance",
+      amount: 193288.07,
       items: [
-        "Steel Conduit",
-        "38 Network Nodes",
-        "38 Outdoor Cameras",
-        "1 NVR Server",
+        "Interior Network Nodes",
+        "Interior Cameras",
+        "NVR Servers",
+        "Lifting Equipment"
+      ]
+    },
+    {
+      id: "exterior-cameras",
+      title: "Exterior Cameras for Surveillance",
+      amount: 49498.70,
+      items: [
+        "Exterior Network Nodes",
+        "Exterior Cameras",
         "Wireless Link",
         "Lifting Equipment"
       ]
     },
     {
       id: "special-cameras",
-      title: "Special Cameras",
+      title: "Special Cameras for Surveillance",
       amount: 42053.80,
       items: [
-        "Steel Conduit",
-        "10 Anti-Explosive Cameras",
+        "Anti-Explosive Cameras",
+        "Specialized Conduit",
         "Network Nodes",
         "Lifting Equipment"
-      ]
-    },
-    {
-      id: "licensing",
-      title: "Licensing",
-      amount: 17622.00,
-      items: [
-        "Licensing for 178 Cameras",
-        "Video Management System",
-        "Technical Support",
-        "System Updates"
       ]
     }
   ];
@@ -129,13 +135,13 @@ const Investment = () => {
                 </div>
               </div>
               <div className="text-right">
-                <p className="text-sm opacity-80 mb-1">+ IVA</p>
+                <p className="text-sm opacity-80 mb-1">+ IVA (8%)</p>
                 <p className="text-2xl font-semibold">
                   {new Intl.NumberFormat('en-US', {
                     style: 'currency',
                     currency: 'USD',
                     minimumFractionDigits: 2,
-                  }).format(totalInvestment * 1.16)}
+                  }).format(totalInvestment * 1.08)}
                 </p>
               </div>
             </div>
@@ -165,7 +171,7 @@ const Investment = () => {
                       <h3 className="text-xl font-semibold text-foreground">{phase.title}</h3>
                       <div className="flex items-center gap-2">
                         <span className="text-2xl font-semibold text-primary">{formattedAmount}</span>
-                        <span className="text-sm font-medium text-accent">+ IVA</span>
+                        <span className="text-sm font-medium text-accent">+ IVA (8%)</span>
                       </div>
                     </div>
 
