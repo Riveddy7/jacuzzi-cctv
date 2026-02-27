@@ -34,8 +34,8 @@ const Investment = () => {
       title: "Cameras for Quality",
       amount: 41512.81,
       items: [
-        "Quality Assurance Cameras",
-        "Network Nodes for Quality"
+        "33 Quality Assurance Cameras",
+        "33 Network Nodes for Quality"
       ]
     },
     {
@@ -54,8 +54,8 @@ const Investment = () => {
       title: "Interior Cameras for Surveillance",
       amount: 193288.07,
       items: [
-        "Interior Network Nodes",
-        "Interior Cameras",
+        "94 Interior Network Nodes",
+        "94 Interior Cameras",
         "NVR Servers",
         "Lifting Equipment"
       ]
@@ -65,8 +65,8 @@ const Investment = () => {
       title: "Exterior Cameras for Surveillance",
       amount: 49498.70,
       items: [
-        "Exterior Network Nodes",
-        "Exterior Cameras",
+        "38 Exterior Network Nodes",
+        "38 Exterior Cameras",
         "Wireless Link",
         "Lifting Equipment"
       ]
@@ -76,9 +76,9 @@ const Investment = () => {
       title: "Special Cameras for Surveillance",
       amount: 42053.80,
       items: [
-        "Anti-Explosive Cameras",
+        "10 Anti-Explosive Cameras",
         "Specialized Conduit",
-        "Network Nodes",
+        "10 Network Nodes",
         "Lifting Equipment"
       ]
     }
