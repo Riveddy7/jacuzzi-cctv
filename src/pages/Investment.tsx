@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
-import { DollarSign, TrendingUp, Shield, CheckCircle, Plus, Minus } from "lucide-react";
+import { DollarSign, TrendingUp, Shield, CheckCircle, Plus, Minus, Info } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
@@ -32,7 +32,7 @@ const Investment = () => {
     {
       id: "cameras-quality",
       title: "Cameras for Quality",
-      amount: 41512.81,
+      amount: 54236.50,
       items: [
         "33 Quality Assurance Cameras",
         "33 Network Nodes for Quality"
@@ -52,10 +52,10 @@ const Investment = () => {
     {
       id: "interior-cameras",
       title: "Interior Cameras for Surveillance",
-      amount: 193288.07,
+      amount: 256874.17,
       items: [
-        "94 Interior Network Nodes",
-        "94 Interior Cameras",
+        "121 Interior Network Nodes",
+        "121 Interior Cameras",
         "NVR Servers",
         "Lifting Equipment"
       ]
@@ -63,7 +63,7 @@ const Investment = () => {
     {
       id: "exterior-cameras",
       title: "Exterior Cameras for Surveillance",
-      amount: 49498.70,
+      amount: 46552.60,
       items: [
         "38 Exterior Network Nodes",
         "38 Exterior Cameras",
@@ -120,9 +120,17 @@ const Investment = () => {
             Investment Summary
           </h1>
 
-          <p className="text-lg text-muted-foreground mb-16 max-w-3xl leading-relaxed">
+          <p className="text-lg text-muted-foreground mb-10 max-w-3xl leading-relaxed">
             Select project phases to customize your investment. The total will automatically update based on your selections.
           </p>
+
+          {/* Discount Banner */}
+          <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 flex items-center gap-3 mb-8">
+            <Info className="w-6 h-6 text-primary flex-shrink-0" />
+            <p className="text-sm md:text-base text-foreground font-medium">
+              OpenEye has authorized a 10% hardware discount, which is already applied to the amounts below.
+            </p>
+          </div>
 
           {/* Total Investment Card */}
           <Card className="p-8 bg-primary text-primary-foreground mb-8 animate-carbon">
